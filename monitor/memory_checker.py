@@ -10,4 +10,3 @@ total = mem.total // (1024 ** 2)
 percent = mem.percent
 
 print(f"Memory Usage: {used} MB / {total} MB ({percent}%)")
-

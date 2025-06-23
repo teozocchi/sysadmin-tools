@@ -14,7 +14,7 @@ def clean_logs(log_dir, days_old):
         filepath = os.path.join(log_dir, filename)
         if os.path.isfile(filepath):
             if os.path.getmtime(filepath) < cutoff:
-                print(f"🧹 Deleting: {filepath}")
+                print(f"Deleting: {filepath}")
                 os.remove(filepath)
 
 
