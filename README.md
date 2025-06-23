@@ -1,23 +1,26 @@
 # 🛠️ sysadmin-tools
 
-A collection of small but powerful scripts for system monitoring, backups, and log management.  
-Built for Linux (tested on Arch), written in Bash and Python.
+Small but sharp tools for sysadmins and power users.  
+Bash and Python scripts to monitor, clean, back up, and notify — no bloat, just scripts that work.
 
-## 📂 Contents
+---
 
-- `monitor/` — scripts to check CPU, memory, and disk usage
-- `backup/` — auto-backup scripts with timestamped folders
-- `logs/` — tools to clean and rotate logs
-- `utils/` — notification helpers (e.g., dunst or libnotify)
+## 📂 Structure
 
-## ⚙️ Dependencies
+| Folder      | Purpose                            |
+|-------------|-------------------------------------|
+| `monitor/`  | CPU + RAM usage scripts             |
+| `backup/`   | Timestamped folder backup tool      |
+| `logs/`     | Log cleaner by age (in days)        |
+| `utils/`    | Shell-based notification helper     |
 
-- Bash 5+
-- Python 3.10+
-- Optional: `psutil`, `notify-send`, `cron`
+---
 
-## 🚀 Usage
+## 🚀 Examples
 
 ```bash
 bash monitor/cpu_usage.sh
 python3 monitor/memory_checker.py
+bash backup/autobackup.sh
+python3 logs/log_cleaner.py /var/log 7
+bash utils/notify.sh "Done" "Backup complete" "dialog-information"
